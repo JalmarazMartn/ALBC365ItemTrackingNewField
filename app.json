@@ -1,0 +1,26 @@
+{
+  "id": "24515173-5258-4fd3-9bb9-5113269870a8",
+  "name": "ItemTracking",
+  "publisher": "Default publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 69000,
+      "to": 69010
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://ItemTracking.com/help/",
+  "showMyCode": true,
+  "runtime": "3.0"
+}
