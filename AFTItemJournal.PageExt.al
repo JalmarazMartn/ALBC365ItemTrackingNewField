@@ -7,6 +7,7 @@ pageextension 69002 "AFT Item Journal" extends "Item Journal"
             field(Grade; "AFT Grade")
             {
                 ApplicationArea = All;
+                Visible = true;
             }
         }
     }

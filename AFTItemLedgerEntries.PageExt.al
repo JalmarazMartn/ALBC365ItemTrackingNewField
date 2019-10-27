@@ -7,6 +7,7 @@ pageextension 69003 "AFT Item Ledger Entries" extends "Item Ledger Entries"
             field(Grade; "AFT Grade")
             {
                 ApplicationArea = All;
+                Visible = true;
             }
         }
     }

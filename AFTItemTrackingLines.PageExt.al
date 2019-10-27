@@ -7,6 +7,7 @@ pageextension 69001 "AFT Item Tracking Lines" extends "Item Tracking Lines"
             field(Grade; "AFT Grade")
             {
                 ApplicationArea = All;
+                Visible = true;
             }
         }
     }
