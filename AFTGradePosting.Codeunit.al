@@ -37,4 +37,24 @@ codeunit 69001 "AFT Grade Posting"
     begin
         NewItemLedgEntry."AFT Grade" := ItemJournalLine."AFT Grade";
     end;
+
+    [EventSubscriber(ObjectType::table, database::"Tracking Specification", 'OnAfterValidateEvent', 'Lot No.', false, false)]
+    local procedure TrackingSpecificationLotNoOnAfterValidateEvent(var Rec: Record "Tracking Specification")
+    begin
+        rec."AFT Grade" := GetGradeFirst(Rec);
+    end;
+
+    local procedure GetGradeFirst(TrackingSpecication: Record "Tracking Specification"): Decimal
+    var
+        ItemLedgerEntry: Record "Item Ledger Entry";
+    begin
+        with ItemLedgerEntry do begin
+            SetCurrentKey("Item No.", "Lot No.", "Posting Date", "Entry No.");
+            SetRange("Item No.", TrackingSpecication."Item No.");
+            SetRange("Lot No.", TrackingSpecication."Lot No.");
+            if FindLast() then
+                exit("AFT Grade");
+        end;
+
+    end;
 }
